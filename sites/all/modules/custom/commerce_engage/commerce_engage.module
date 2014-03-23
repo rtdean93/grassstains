@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ * Extra functions for Commerce Engage.
+ */
+
+
+
+function commerce_engage_commerce_checkout_page_info_alter(&$checkout_pages) {
+    $checkout_pages['review']['submit_value'] = t('Submit Order');
+}
+
+
+/**
+ * Alter Menus to seperate permissions for Administer User Settings and Adding User Accounts
+ */
+ 
+function commerce_engage_menu_alter(&$items) {
+    // Accounts filter
+    $items['admin/config/people/accounts/fields']['access arguments'] = array('custom user permission');
+    $items['admin/config/people/accounts/display']['access arguments'] = array('custom user permission');
+
+}
+
+/**
+ * Implements hook_permission().
+ */
+function commerce_engage_permission() {
+   return array(
+    'custom user permission' => array(
+      'title' => t('Custom user account permission'), 
+      'description' => t('Customized users permission @see commerce_engage.module'),
+    ),
+  );
+}
+
+?>

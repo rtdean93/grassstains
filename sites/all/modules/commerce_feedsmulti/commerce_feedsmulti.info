@@ -1,0 +1,12 @@
+name = Commerce Feeds multitype
+description = Allows products of different types to be imported in a single operation
+core = 7.x
+dependencies[] = commerce_feeds
+dependencies[] = commerce_product
+
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-1.0-alpha1+0-dev"
+core = "7.x"
+project = "commerce_feedsmulti"
+datestamp = "1380560236"
+

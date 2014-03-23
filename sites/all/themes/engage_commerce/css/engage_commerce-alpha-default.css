@@ -1,0 +1,9 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+.navigation .primary-menu ul li a.active, .navigation .primary-menu ul li a:hover {
+background-color: #00CC77;
+}
+
+.navigation .second-menu ul li a.active, .navigation .second-menu ul li a:hover {
+background-color: #00CC77;
+}
